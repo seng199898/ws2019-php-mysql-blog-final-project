@@ -17,7 +17,7 @@ Config::init([
 		'./controller/PostController.php',
 		'./controller/CategoryController.php',
 		'./view/View.php',
-		'./Router/api.php',
+		'./router/api.php',
 	],
 
 	'database' => [
