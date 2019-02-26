@@ -105,6 +105,8 @@ class PostController{
 				'title' => request()->input('title'),
 				'content' => request()->input('content'),
 				'category_id' => request()->input('category'),
+				'created_date' => date('Y-m-d H-i-s'),
+				'updated_date' => date('Y-m-d H-i-s'),
 			]);
 
 			if($res)
