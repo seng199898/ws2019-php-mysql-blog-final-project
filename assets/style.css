@@ -1,0 +1,165 @@
+body {
+	font-family: 'Montserrat';
+	padding: 50px;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1 {
+	font-size: 40px;
+	color: #333;
+	margin: 0;
+	font-family: 'Libre Baskerville';
+}
+
+header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+a{
+	color: #176caf;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	padding: 30px 0;
+}
+
+main { 
+	display: flex;
+	min-height: calc( 100vh - ( 122px + 79px + 50px + 80px + 40px) );
+}
+
+main .sidebar {
+	flex: none;
+	width: 280px;
+}
+
+main .sidebar li{
+	padding: 10px 0;
+}
+
+main .note {
+	flex: 1;
+	padding-left: 30px;
+}
+
+main .note h1 {
+	font-size: 30px;
+	margin: 0;
+}
+
+main .note h1 small {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.mt-10 {
+	margin-top: 40px;
+}
+
+form {
+	width: 100%;
+}
+
+form input, textarea {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 30px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	font-family: 'Montserrat';
+}
+
+form textarea {
+	min-height: 300px;
+	max-width: 100%;
+}
+
+form .btns {
+	display: flex;
+}
+
+form .btns > input {
+	margin-left: auto;
+}
+
+form input[type='submit'] {
+	background-color: #23e49a;
+	color: #fff;
+	border-color: #0aaf6f;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+form .btns .delete {
+	background-color: #f7695e;
+	color: #fff;
+	border-color: #f44336;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+	text-align: center;
+	text-decoration: none;
+}
+
+form input[type='submit'], form .btns .delete {
+	border: none;
+	width: 100px;
+	padding: 10px;
+	height: 40px;
+	cursor: pointer;
+	transition: .3s all ease-in-out;
+	border-radius: 2px;
+}
+
+form .btns .delete:hover {
+	background-color: #f44336;
+}
+
+
+form input[type='submit']:hover {
+	background-color: #0aaf6f;
+}
+
+.note .info {
+	margin-bottom: 30px;
+	font-size: 14px;
+	color: #999;
+}
+
+footer p {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px solid #f1f1f1;
+	text-align: center;
+}
+
+.subtitle-bar {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+.subtitle-bar form {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+.subtitle-bar form input[type='submit']{
+	margin-left: 10px;
+}
