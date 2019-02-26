@@ -1,5 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+// For Vuejs ajax from different port and domain
+// header("Access-Control-Allow-Origin: *");
 
 include_once('./config.php');
 
