@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2019 年 02 月 26 日 18:59
+-- 產生時間： 2019 年 02 月 26 日 19:03
 -- 伺服器版本: 10.1.34-MariaDB
 -- PHP 版本： 7.2.8
 
@@ -85,7 +85,8 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `title` (`title`);
+  ADD UNIQUE KEY `title` (`title`),
+  ADD KEY `posts_categories_FK` (`category_id`);
 
 --
 -- 在匯出的資料表使用 AUTO_INCREMENT
@@ -102,6 +103,16 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- 已匯出資料表的限制(Constraint)
+--
+
+--
+-- 資料表的 Constraints `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_categories_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
